@@ -37,10 +37,17 @@ $aluno->insert();
 
 echo "<pre>";print_r ($aluno);
 */
-
-$usuario = new Usuario();
+/*alterando um usuairo*/
+/*$usuario = new Usuario();
 $usuario->loadById(4);
 $usuario->update("aluno","123");
+
+echo "<pre>";print_r ($usuario);
+*/
+//excluindo o usuario
+$usuario = new Usuario();
+$usuario->loadById(4);
+$usuario->delete(4);
 
 echo "<pre>";print_r ($usuario);
 ?>

@@ -99,6 +99,19 @@ class Usuario{
 			':ID'=>$this->getIdusuario()
 		));
 	}
+
+	public function delete(){
+		$sql = new Sql();
+		$sql->query("DELETE FROM td_usuarios WHERE idusuario = :ID",array(
+			':ID'=>$this->getIdusuario()
+		));
+		$this->setDessenha("");
+		$this->setDeslogin("");
+		$this->setDtcadastro(null);
+		$this->setIdusuario(0);
+
+
+	}
 }
 
 ?>
