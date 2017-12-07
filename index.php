@@ -25,8 +25,22 @@ echo json_encode($lista[1]);
 echo json_encode($busca);
 */
 //carrega usuario usando o login e a senha
-$usuario = new Usuario();
+/*$usuario = new Usuario();
 $usuario->login("thiago","2345");
-
 echo"<pre>";print_r($usuario);
+*/
+//usando uma uma função com uma procedure no banco para cadastrar
+/*$aluno = new Usuario();
+$aluno->setDeslogin("julia");
+$aluno->setDessenha("juju");
+$aluno->insert();
+
+echo "<pre>";print_r ($aluno);
+*/
+
+$usuario = new Usuario();
+$usuario->loadById(4);
+$usuario->update("aluno","123");
+
+echo "<pre>";print_r ($usuario);
 ?>
